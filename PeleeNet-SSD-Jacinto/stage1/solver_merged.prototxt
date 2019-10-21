@@ -1,0 +1,25 @@
+train_net: "train_merged.prototxt"
+test_net: "test_merged.prototxt"
+test_iter: 620
+test_interval: 2000
+base_lr: 0.00001
+display: 100
+max_iter: 120000
+lr_policy: "multistep"
+gamma: 0.1
+weight_decay: 0.00005
+snapshot: 2000
+snapshot_prefix: "snapshot/pelee_merged_voc_ad_320x320_0806"
+solver_mode: GPU
+debug_info: false
+snapshot_after_train: true
+test_initialization: true
+average_loss: 10
+stepvalue: 30000
+stepvalue: 60000
+iter_size: 1
+type: "RMSProp"
+eval_type: "detection"
+ap_version: "11point"
+show_per_class_result: true
+
